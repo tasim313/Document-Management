@@ -165,3 +165,7 @@ class DocumentShare(BaseModel):
 
     def __str__(self):
         return self.slug
+
+class DocumentConvertor(BaseModel):
+    docx_file = models.FileField(blank=True, null=True)
+    pdf_file = models.FileField(blank=True, null=True)
