@@ -7,6 +7,7 @@ from .models import(
     User,
     Document,
     DocumentShare,
+    DocumentConvertor,
 )
 
 class UserAdmin(ImportExportModelAdmin, admin.ModelAdmin):
@@ -71,3 +72,19 @@ class DocumentShareAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ('user_created','user_updated')
 
 admin.site.register(DocumentShare, DocumentShareAdmin)
+
+
+
+class DocumentConvertorAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+    list_display = (
+        'uid',
+        'created_date',
+        'updated_date',
+        'status',
+        'user_created',
+        'user_updated',
+        )
+    list_filter = ('status',)
+    search_fields = ('user_created','user_updated')
+
+admin.site.register(DocumentConvertor, DocumentConvertorAdmin)
