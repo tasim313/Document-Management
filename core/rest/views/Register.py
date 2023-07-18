@@ -7,6 +7,9 @@ from ...models import User
 from ..serializers import Register
 
 class RegisterView(generics.CreateAPIView):
+    """
+         user can register the system by email, select role and password
+    """
     queryset = User.objects.all()
     permission_classes = (permissions.AllowAny,)
     serializer_class = Register.RegisterSerializer
