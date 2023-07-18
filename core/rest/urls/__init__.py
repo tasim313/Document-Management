@@ -5,4 +5,5 @@ urlpatterns = [
     path("register/", include("core.rest.urls.Register")),
     path('document/', include("core.rest.urls.document")),
     path('share/', include("core.rest.urls.share")),
+    path("convert/file", include("core.rest.urls.convertor")),
 ]
