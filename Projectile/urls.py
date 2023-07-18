@@ -6,9 +6,10 @@ from .ProjectileURLs.debug_toolbar import urlpatterns as debug
 from .ProjectileURLs.health import urlpatterns as health
 from .ProjectileURLs.swagger import urlpatterns as swagger
 from .ProjectileURLs.core import urlpatterns as core
+from .ProjectileURLs.document import urlpatterns as document
 
 
-urlpatterns = admin+debug+health+swagger+core + static(
+urlpatterns = admin+debug+health+swagger+core+document + static(
     settings.MEDIA_URL,
     document_root=settings.MEDIA_ROOT
     ) + static(

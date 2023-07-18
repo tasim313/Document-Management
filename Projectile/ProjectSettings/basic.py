@@ -28,6 +28,7 @@ THIRD_PARTY_APP = [
     'import_export',
     "corsheaders",
     "debug_toolbar",
+    "drf_spectacular",
 ]
 
 HEALTH_CHECK_APPS = [
