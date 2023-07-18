@@ -1,4 +1,4 @@
-from rest_framework import generics, viewsets
+from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import filters
 from ..serializers import share
@@ -7,8 +7,8 @@ from ..permission import base
 
     
 
-class ShareDocumentView(viewsets.ModelViewSet):
-    "Here user can see how many people and which user share his document"
+class ShareDocumentView(generics.ListAPIView):
+    "Here user can see how many people and which user share his document list"
     permission_classes = [IsAuthenticated, base.IsOwnerOrAdminOrReadOnly]
     queryset = DocumentShare.objects.all()
     serializer_class = share.ShareDocumentSerializer
