@@ -7,6 +7,9 @@ from ...models import User
 from ..serializers import Login
 
 class LoginView(generics.ListCreateAPIView):
+
+    """User can Login system by email and password"""
+    
     permission_classes = (permissions.AllowAny,)
     queryset = User.objects.all()
     serializer_class = Login.LoginSerializer
