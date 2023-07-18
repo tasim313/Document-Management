@@ -34,4 +34,22 @@ Open [http://localhost:8000](127.0.0.1:8000) with your browser to see the result
 ## Document PDF
 ![Report.pdf](https://github.com/tasim313/Document-Management/files/12078343/Report.pdf)
 
+## requirement/development.text
+```bash 
+Django==4.2.2
+djangorestframework     
+django-filter
+drf-yasg
+drf-spectacular
+django-versatileimagefield
+django-autoslug==1.9.9
+django-debug-toolbar
+django-health-check
+django-import-export
+django-jazzmin
+django-cors-headers==4.0.0
+docx2pdf==0.1.8
+markdown 
+
+```
 
